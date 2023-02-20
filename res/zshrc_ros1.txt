@@ -1,0 +1,31 @@
+function useros1 {
+
+  # export PYTHONPATH=$PYTHONPATH:/usr/lib/python2.7/dist-packages
+  
+  alias cbt='catkin build --this'
+  alias rqt_reconfigure='rosrun rqt_reconfigure rqt_reconfigure'
+  
+  #alias sourceohm='source /home/m1ch1/workspace/ros/ohm_ws/devel/setup.bash'
+  #alias sourcedefault='source /home/m1ch1/workspace/ros/default_ws/devel/setup.bash'
+  #alias sourceflair='source /home/m1ch1/workspace/ros/flair_ws/devel/setup.bash'
+  #alias sourceinstall='source /home/m1ch1/workspace/ros/install/setup.bash'
+  #alias sourcecatkin='source /home/m1ch1/workspace/ros/catkin_ws/devel/setup.bash'
+  
+  # orbslam2
+  # export ORB_SLAM_ROOT=/home/m1ch1/workspace/evo/orbslam2
+
+  #roscommands
+  source /opt/ros/noetic/setup.zsh #todo change to variable
+
+  #souce default devel space
+  # source /home/m1ch1/workspace/ros/catkin_ws/devel/setup.zsh
+  
+  
+  #ROS-Master
+  export ROS_MASTER_URI=http://localhost:11311/
+  export ROS_HOSTNAME=localhost
+  export ROS_IP=localhost
+  
+  # export ROS_NAMESPACE=/shm
+  echo "source ros1"
+}

@@ -1,0 +1,39 @@
+function useros2 {
+
+  distro="hubmle"
+  # check if arg1 is set
+  if [ -n "$1" ]; then
+    distro=$1
+  fi
+
+  #alias
+  alias rqt_reconfigure='ros2 run rqt_reconfigure rqt_reconfigure'
+
+  source /opt/ros/$distro/setup.zsh
+
+  eval "$(register-python-argcomplete3 ros2)"
+  eval "$(register-python-argcomplete3 colcon)"
+
+  #working ws
+  # source /home/m1ch1/workspace/ros2/dev_ws/install/setup.zsh
+
+  export _colcon_cd_root=/opt/ros/$distro
+  
+  #gazebo nav2 sim stuff
+  # export TURTLEBOT3_MODEL=waffle
+  # export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/opt/ros/galactic/share/turtlebot3_gazebo/models
+
+  #bug in rviz -> can not render stuff but box wtf -> fix below
+  export LC_NUMERIC="en_US.UTF-8"
+
+
+  export ROS_DOMAIN_ID=27
+
+  #todo check for now let is be
+  export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+
+
+  # alias r2topic="ros2 topic"
+  # echo "source ros2"
+}
+
