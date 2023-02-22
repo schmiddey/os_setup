@@ -77,9 +77,16 @@ fi
 #     cat ~/.schmiddey/os_setup/res/zshrc_ros1.txt >> ~/.zshrc_build
 #el
 if [ "$1" = "ros2" ]; then
-    cat ~/.schmiddey/os_setup/res/zshrc_ros2.txt >> ~/.zshrc_build
+  cat ~/.schmiddey/os_setup/res/zshrc_ros2.txt >> ~/.zshrc_build
+
+  #append command to source .zshrc_build
+  echo "useros2 $2" >> ~/.zshrc_build
 fi
 
-#append command to source .zshrc_build
-echo "useros2 $2" >> ~/.zshrc_base
+
+#rename .zshrc to .zshrc_default
+mv ~/.zshrc ~/.zshrc_default
+#rename .zshrc_build to .zshrc
+mv ~/.zshrc_build ~/.zshrc
+
 
