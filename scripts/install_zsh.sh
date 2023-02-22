@@ -25,8 +25,6 @@ else
 
 fi
 
-#copy theme
-cp res/gallois_own.zsh-theme ~/.oh-my-zsh/themes/
 
 
 
@@ -58,6 +56,10 @@ fi
 
 
 #for now this repo must be in ~/.schmiddey/
+
+
+#copy theme
+cp ~/.schmiddey/os_setup/res/gallois_own.zsh-theme ~/.oh-my-zsh/themes/
 
 ### create .zshrc
 
