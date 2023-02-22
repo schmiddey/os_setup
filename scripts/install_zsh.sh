@@ -4,7 +4,7 @@
 if [ -f /etc/debian_version ]; then
     sudo apt install zsh -y
     #install wget
-    sudo apt install wget -y
+    sudo apt install curl -y
     #install tmux
     sudo apt install tmux -y
     #install git
@@ -15,12 +15,14 @@ fi
 
 #if on macos not needed 
 
+
 #check if oh-my-zsh is installed
 if [ -d ~/.oh-my-zsh ]; then
     echo "oh-my-zsh already installed"
 else
-    #install oh-my-zsh
-    sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+    #install oh-my-zsh silent
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+
 fi
 
 #copy theme
