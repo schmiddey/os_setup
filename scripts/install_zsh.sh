@@ -68,7 +68,7 @@ replace="export ZSH=\"/home/$USER/.oh-my-zsh\""
 search="_insert_zsh_env_here_"
 #replace line in .zshrc_build
 if [[ $search != "" && $replace != "" ]]; then
-  sed -i "" "s/$search/$replace/" ~/.zshrc_build
+  sed -i "s/$search/$replace/" ~/.zshrc_build
 fi
 
 #if first argument is ros1 or ros2 then append zshrc_ros1/2.txt
