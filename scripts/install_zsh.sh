@@ -1,4 +1,6 @@
+#!/bin/bash
 #install script only for debian based distros and macos
+
 
 #check os type and install zsh
 if [ -f /etc/debian_version ]; then
@@ -68,7 +70,12 @@ cp ~/.schmiddey/os_setup/res/zshrc_base.txt ~/.zshrc_build
 # user=$(whoami)
 replace="export ZSH=\"/home/$USER/.oh-my-zsh\""
 search="_insert_zsh_env_here_"
+
+echo $replace
+echo $search
+
 #replace line in .zshrc_build
+#important [[ is bash syntax  so run script with bash
 if [[ $search != "" && $replace != "" ]]; then
   #use + as delimiter to avoid problems with / in paths
   sed -i "s+$search+$replace+" ~/.zshrc_build
