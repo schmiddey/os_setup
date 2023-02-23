@@ -76,7 +76,7 @@ plugins=(
   zsh-syntax-highlighting
 )
 #for brew completions
-FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+#FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 #for zsh-completions
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
