@@ -1,6 +1,6 @@
 function useros2 {
 
-  distro="hubmle"
+  distro="humble"
   # check if arg1 is set
   if [ -n "$1" ]; then
     distro=$1
